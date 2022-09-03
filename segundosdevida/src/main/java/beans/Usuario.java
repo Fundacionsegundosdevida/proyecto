@@ -19,9 +19,9 @@ public class Usuario {
     private boolean prioritario; // es relativo a premiun, revisar la bd el tipo de dato
     private String telefono;
     private String direccion;
-    private Double cuota_mantenimiento;
+    private double cuota_mantenimiento;
 //--------constructor --
-    public Usuario(String username, String contrasena, String nombre, String apellido, int edad, String diagnostico, String correo, boolean prioritario, String telefono, String direccion, Double cuota_mantenimiento) {
+    public Usuario(String username, String contrasena, String nombre, String apellido, int edad, String diagnostico, String correo, boolean prioritario, String telefono, String direccion, double cuota_mantenimiento) {
         this.username = username;
         this.contrasena = contrasena;
         this.nombre = nombre;
@@ -115,11 +115,11 @@ public class Usuario {
         this.direccion = direccion;
     }
 
-    public Double getCuota_mantenimiento() {
+    public double getCuota_mantenimiento() {
         return cuota_mantenimiento;
     }
 
-    public void setCuota_mantenimiento(Double cuota_mantenimiento) {
+    public void setCuota_mantenimiento(double cuota_mantenimiento) {
         this.cuota_mantenimiento = cuota_mantenimiento;
     }
 // tostrings()
