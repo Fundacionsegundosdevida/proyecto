@@ -8,7 +8,7 @@ import java.sql.Date; //libreria para usar fechas
 
 /**
  *
- * @author Usuario
+ * **********************PROYECTO*****************************************
  */
 public class Alquiler {
      //atributos de la tabla alquiler en la BD 
@@ -16,18 +16,19 @@ public class Alquiler {
     private String username;
     private Date fecha;
     //datos dicionales no estan en la tabla pero la necesitamos para mostrar esos datos
-    private boolean novedad;
-    private String genero;
+    private boolean observacion_equipo;
+    private String tipo_equipo; // ES EL QUIVALENTE A GENERO 
     
-//----------Constrcutor
-    public Alquiler(int id_equipo, String username, Date fecha, boolean novedad, String genero) {
+    
+// -------CONSTRUCTOR ---
+    public Alquiler(int id_equipo, String username, Date fecha, boolean observacion_equipo, String tipo_equipo) {
         this.id_equipo = id_equipo;
         this.username = username;
         this.fecha = fecha;
-        this.novedad = novedad;
-        this.genero = genero;
+        this.observacion_equipo = observacion_equipo;
+        this.tipo_equipo = tipo_equipo;
     }
-//-------------getters y setters 
+//---GETTER Y SEETERS
     public int getId_equipo() {
         return id_equipo;
     }
@@ -52,25 +53,26 @@ public class Alquiler {
         this.fecha = fecha;
     }
 
-    public boolean isNovedad() {
-        return novedad;
+    public boolean isObservacion_equipo() {
+        return observacion_equipo;
     }
 
-    public void setNovedad(boolean novedad) {
-        this.novedad = novedad;
+    public void setObservacion_equipo(boolean observacion_equipo) {
+        this.observacion_equipo = observacion_equipo;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getTipo_equipo() {
+        return tipo_equipo;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setTipo_equipo(String tipo_equipo) {
+        this.tipo_equipo = tipo_equipo;
     }
-// -----------toStrings()
+ // ----------tStrings---------------
     @Override
     public String toString() {
-        return "Alquiler{" + "id_equipo=" + id_equipo + ", username=" + username + ", fecha=" + fecha + ", novedad=" + novedad + ", genero=" + genero + '}';
+        return "Alquiler{" + "id_equipo=" + id_equipo + ", username=" + username + ", fecha=" + fecha + ", observacion_equipo=" + observacion_equipo + ", tipo_equipo=" + tipo_equipo + '}';
     }   
+    
     
 }
