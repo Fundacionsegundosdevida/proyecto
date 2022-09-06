@@ -33,4 +33,11 @@ public class DBConnection {
         }
         
     }
+    //-------Retorno de la base de datos ----------------
+    public Connection getConnection(){
+    return connection; // si encuentra el usuario y password retorne base de datos
+    }
+    public void desconectar(){
+        connection = null;
+    }
 }
