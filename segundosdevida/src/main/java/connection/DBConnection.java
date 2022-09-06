@@ -5,10 +5,13 @@
 package connection;
 
 /**
- *
- * -------------PROYECTO---------------
+ *====================================================================
+ * ===================================PROYECTO========================
+ * ===================================================================
  */
 import java.sql.Connection; //importando la dependica para la coneccion
+import java.sql.DriverManager;// importando controlador de sql
+
 public class DBConnection {
     //proseso de conexion entre el bac y la BD
     Connection connection; //creando objeto conexion
@@ -16,4 +19,18 @@ public class DBConnection {
     static String port = "3306"; //puerto de la bd, toca revisar en el gertor de bd
     static String login = "root";
     static String password = "admin"; //contraseña de la base de datos 
+    
+    //se genera uns constructor bacio 
+    public DBConnection() {
+        //tratamiento de errores
+        try {
+            Class.forName("com.mysql.jdbc.Driver"); //llamado ala base de datos      
+            String url = "jdbc:mysql://localhost:"+ this.port+ "/"+this.bd; // url de la base de dtaos 
+            connection = DriverManager.getConnection(url,this.login, this.password); // controlado de la conexion
+            System.out.println("Conexion establecida");
+        } catch (Exception ex) {
+            System.out.println("Error de la conexion");
+        }
+        
+    }
 }
