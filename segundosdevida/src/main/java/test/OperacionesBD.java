@@ -17,13 +17,20 @@ import java.sql.Statement;
 
 public class OperacionesBD {
     
+    //metodo principal de ejecucion 
+    public static void main(String[] args){
+        actualizar_equipo_medico(6, "Cambiado");//testeo de actualizacion
+        listarequipo_medico(); //testeo de listado
+    
+    }
+    
     
      //========================UPDATE==============================================
     public static void actualizar_equipo_medico(int id_equipo, String tipo_equipo){
     
         DBConnection con = new DBConnection();
-        // creando variable llamada sql = Nombre de la BD -----------------columna -----------donde ------ id = Pk
-        String sql="UPDATE equipo_medico SET tipo_equipo ='"+tipo_equipo+"'WHERE id="+id_equipo;
+        // creando variable llamada sql = Nombre de la BD -----------------columna -----------donde ------ id_equipo = Pk
+        String sql="UPDATE equipo_medico SET tipo_equipo ='"+tipo_equipo+"'WHERE id_equipo="+id_equipo;
         // control errores
         try {
             //validano la sentencia 
