@@ -47,9 +47,14 @@ function registrarUsuario() {
     let contrasenaConfirmacion = $("#input-contrasena-repeat").val();
     let nombre = $("#input-nombre").val();
     let apellido = $("#input-apellido").val();
-    let email = $("#input-email").val();
-    let saldo = $("#input-saldo").val();
-    let premiun = $("#input-premiun").prop("checked");
+    
+    let edad = $("#input-edad").val();
+    let diagnostico = $("#input-diagnostico").val();
+    let correo = $("#input-correo").val();    
+    let telefono = $("#input-telefono").val();
+    let direccion = $("#input-direccion").val();
+    let cuota_mantenimiento = $("#input-cuota_mantenimiento").val();
+    let prioritario = $("#input-prioritario").prop("checked");
 
     if (contrasena == contrasenaConfirmacion) {
 
@@ -62,9 +67,13 @@ function registrarUsuario() {
                 contrasena: contrasena,
                 nombre: nombre,
                 apellido: apellido,
-                email: email,
-                saldo: saldo,
-                premiun: premiun
+                edad: edad,
+                diagnostico: diagnostico,                
+                correo: correo,
+                telefono: telefono,
+                direccion: direccion,                
+                cuota_mantenimiento: cuota_mantenimiento,
+                prioritario: prioritario
             }),
             success: function (result) {
                 let parsedResult = JSON.parse(result);
